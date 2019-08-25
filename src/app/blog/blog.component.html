@@ -1,0 +1,18 @@
+<!--Pricing Tables-->
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+    <div class="row clearfix">
+  
+        <div class="section-heading">
+            <h3>{{ blog.tag}}</h3>
+            <h2 class="section-title">{{ blog.title}}</h2>
+        </div>
+        <div *ngFor="let post of pages" class="post-block col-3 wow fadInUp" data-wow-delay='0.4s'>
+            <app-post [post]='post'></app-post>
+        </div>
+
+    </div>
+    <div class="row clearfix">
+      <app-paggination [pager] = "pager" (setPage) = "setPage($event)"></app-paggination>
+    </div>
+</section>
+  <!--End of Pricing Tables-->

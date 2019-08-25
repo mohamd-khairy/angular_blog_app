@@ -1,0 +1,29 @@
+<!--Pricing Tables-->
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  <div class="row clearfix">
+
+      <div class="section-heading">
+          <h3>{{ pricing.tag}}</h3>
+          <h2 class="section-title">{{ pricing.title}}</h2>
+      </div>
+
+      <!--Pricing Block-->
+      <div *ngFor="let plan of pricing.plans" class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="pricing-block-content">
+              <h3>{{ plan.title}}</h3>
+              <p class="pricing-sub">{{ plan.subtitle}}</p>
+              <div class="pricing">
+                  <div class="price"><span>{{ plan.currency}}</span>{{ plan.price}}</div>
+                  <p>{{ plan.desc}}</p>
+              </div>
+              <ul>
+                  <li *ngFor="let feature of plan.features">{{feature}}</li>
+              </ul>
+              <a href="{{plan.buttonLink}}" class="button">{{plan.buttontext}}</a>
+          </div>
+      </div>
+      <!--End Pricing Block-->
+
+  </div>
+</section>
+<!--End of Pricing Tables-->

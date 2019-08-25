@@ -1,0 +1,16 @@
+
+<!--Pricing Tables-->
+
+    <div class="post-block-content" >
+        <h3>{{ post.title}}</h3>
+        <p class="post-sub">BY {{ post.auther}} | {{ post.date | date:'dd-mm-yyyy'}}</p>
+        <div class="post-feature-image">
+            <img src=" ../assets/images/gallery-images/{{ post.img}}" />
+        </div>
+        <ul>
+            {{ post.excert}}
+        </ul>
+        <a routerLink="/Article/{{post.id}}">Read More...</a>
+    </div>
+
+  <!--End of Pricing Tables-->

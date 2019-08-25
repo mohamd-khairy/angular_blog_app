@@ -1,0 +1,26 @@
+  <!--Clients-->
+  <section id="clients" class="scrollto clearfix">
+    <div class="row clearfix">
+
+        <div class="col-3">
+
+            <div class="section-heading">
+                <h3>{{ clients.tag}}</h3>
+                <h2 class="section-title">{{ clients.title}}</h2>
+                <p class="section-subtitle">{{ clients.desc}}</p>
+            </div>
+
+        </div>
+
+        <div class="col-2-3">
+
+            <a *ngFor="let icon of clients.icons" href="#" class="col-3">
+                <img src="assets/images/company-images/{{ icon.img}}" alt="Company"/>
+                <div class="client-overlay"><span>{{icon.name}}</span></div>
+            </a>
+    
+        </div>
+
+    </div>
+</section>
+<!--End of Clients-->
