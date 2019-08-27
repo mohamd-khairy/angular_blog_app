@@ -11,7 +11,11 @@ import { HeaderComponent } from './header/header.component';
 import { BlogComponent } from './blog/blog.component';
 import { PostComponent } from './post/post.component';
 import { ArticleComponent } from './article/article.component';
+import { LoginComponent } from './login/login.component';
+import { ContcatusComponent } from './contcatus/contcatus.component';
+import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GaurdService } from './gaurd.service';
 
 const routes: Routes = [
   { path: "" , redirectTo:"/Home" , pathMatch:"full"},
@@ -21,8 +25,12 @@ const routes: Routes = [
   { path: "Testmonials" , component:TestimonialsComponent},
   { path: "Gallary" , component:GallaryComponent},
   { path: "Clients" , component:ClientsComponent},
-  { path: "Blog" , component:BlogComponent},
+  { path: "Pricing" , component:PricingComponent},
+  { path: "Blog" , component:BlogComponent , canActivate: [GaurdService]},
   { path: "Post" , component:PostComponent},
+  { path: "Login" , component:LoginComponent},
+  { path: "Signup" , component:SignupComponent},
+  { path: "Contactus" , component:ContcatusComponent},
   { path: "Article/:id" , component:ArticleComponent},
   { path: "404" , component:NotFoundComponent},
   { path: "**" , redirectTo:'/404'},

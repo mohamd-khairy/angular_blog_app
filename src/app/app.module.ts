@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,9 @@ import { PostComponent } from './post/post.component';
 import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PagginationComponent } from './paggination/paggination.component';
+import { LoginComponent } from './login/login.component';
+import { ContcatusComponent } from './contcatus/contcatus.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +42,15 @@ import { PagginationComponent } from './paggination/paggination.component';
     PostComponent,
     ArticleComponent,
     NotFoundComponent,
-    PagginationComponent
+    PagginationComponent,
+    LoginComponent,
+    ContcatusComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [ConfigService ,PagerService],
   bootstrap: [AppComponent]

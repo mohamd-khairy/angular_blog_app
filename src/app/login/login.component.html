@@ -1,0 +1,29 @@
+<!--Introduction-->
+<section class="secondary-color text-center scrollto clearfix">
+  <div class="row clearfix">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body">
+          <h4><i class="ion-log-in"></i> Login</h4>
+          <form [formGroup] = "loginForm" (ngSubmit)="login(loginForm.value)">
+            <div class="form-group">
+              <input type="email" name="email" formControlName="email" class="form-control input-lg" placeholder="input your email"/>
+              <span class="ion-at form-control-icon"></span>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" formControlName="password" class="form-control input-lg" placeholder="input your password"/>
+              <span class="ion-key form-control-icon"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" [class.disable] = "!loginForm.valid">Login</button><br>
+              </div>
+            <p class="text-center">
+                <small>Not Have An Account Yet? <a routerLink="/Signup">Sign Up</a></small>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End of Introduction-->

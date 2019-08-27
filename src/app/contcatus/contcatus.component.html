@@ -1,0 +1,34 @@
+<!--Introduction-->
+<section class="secondary-color text-center scrollto clearfix">
+    <div class="row clearfix">
+      <div class="container">
+        <div class="panel">
+          <div class="panel-body">
+            <h4><i class="ion-person"></i> Contact Us</h4>
+            <form [formGroup] = "contactusForm" (ngSubmit)="contactus(contactusForm.value)">
+              <div class="form-group">
+                <input type="text" name="firstName" formControlName="firstName" class="form-control input-lg" placeholder="input your first name"/>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control input-lg" placeholder="input your last name"/>
+              </div>
+              <div class="form-group">
+                  <input type="email" name="email" formControlName="email" class="form-control input-lg" placeholder="input your email"/>
+                  <span class="ion-at form-control-icon"></span>
+                </div>
+              <div class="form-group">
+                <textarea  name="message" formControlName="message" class="form-control input-lg" placeholder="input your text"></textarea>
+                <span class="ion-key form-control-icon"></span>
+              </div>
+              <div class="form-group">
+                  <button class="btn btn-success" [class.disable] = "!contactusForm.valid">Send</button><br>
+                </div>
+              <p class="text-center">
+                  <small>Leave Your Message And We Will Contact With You <a routerLink="/Home">Home</a></small>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End of Introduction-->
+  

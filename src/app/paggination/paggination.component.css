@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 .paggination>li.active{
-    background-color: blue;
+    background-color: darkslategrey;
 }
 .paggination>li.disabled{
     background-color: #ddd;

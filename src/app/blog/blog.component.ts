@@ -10,7 +10,7 @@ import { PagerService } from '../pager.service';
 export class BlogComponent implements OnInit {
   posts= {};
   blog= {};
-  pageSize = 2;
+  pageSize = 3;
   allItems: any[];
   pages: any[];
   pager: any ={};
@@ -35,8 +35,6 @@ export class BlogComponent implements OnInit {
 
   setPage(pageNumber: number){
     this.pager = this.pagerService.getPager(this.allItems.length ,pageNumber ,this.pageSize);
-    console.log(this.pager);
-
     this.pages = this.allItems.slice(this.pager.startIndex , this.pager.endIndex + 1);
   }
 
